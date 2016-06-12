@@ -13,3 +13,26 @@ switch = 25
 led_pins = [blue, green, yellow, red]
 button_pins = [red_btn, yellow_btn, switch]
 
+def turn_on(led):
+  GPIO.output(led,0)
+  
+def turn_off(led):
+  GPIO.output(led,1)
+
+def startup():
+  print("Startup sequence")
+  time.sleep(1)
+  turn_on(blue)
+  time.sleep(1)
+  turn_on(green)
+  time.sleep(1)
+  turn_off(blue)
+  turn_on(yellow)
+  time.sleep(1)
+  turn_off(green)
+  turn_on(red)
+  time.sleep(1)
+  turn_off(yellow)
+  time.sleep(1)
+  turn_off(red)
+
