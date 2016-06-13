@@ -37,6 +37,10 @@ def isOn(led) :
     return False
 
 def turn_on(led):
+  global blue_on
+  global green_on
+  global red_on
+  global yellow_on
   if led in led_pins :
     print("Turning on LED")
     GPIO.output(led,True)
