@@ -18,8 +18,26 @@ time.sleep(2)
 #to turn it off:
 led.turn_off(led.red)
 
+#the led.isOn(led) function tells you if a particular led is currently on
+if led.isOn(led.yellow):
+  print("Yellow is on")
+else :
+  print("Yellow is off")
+time.sleep(2)
+led.turn_on(led.yellow)
+if led.isOn(led.yellow):
+  print("Yellow is on")
+else :
+  print("Yellow is off")
+time.sleep(2)
+led.turn_off(led.yellow)
+
 #the btn.isOn(btn) function tells you if a particular button is being pressed or if a switch is on
 #your choices for buttons are currently btn.red, btn.yellow, btn.switch
-while (btn.isOn(btn.switch)) :
-  if (btn.isOn(btn.red)):
-    
+while btn.isOn(btn.switch) :
+  if btn.isOn(btn.red):
+    led.switch(led.red)
+  if btn.isOn(btn.yellow) :
+    led.switch(led.yellow)
+
+btn.GPIO.cleanup()
