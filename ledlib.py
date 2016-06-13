@@ -169,6 +169,14 @@ def switch(led) :
   else :
     print("Not in LED List")
 
+def blink(led,num_times,how_fast) :
+  if led in led_list :
+    for num_times :
+      turn_on(led)
+      time.sleep(how_fast)
+  else :
+    print "Not in LED list"
+
 def startup():
   print("Startup sequence")
   time.sleep(1)
