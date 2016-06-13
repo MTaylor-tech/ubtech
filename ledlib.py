@@ -28,7 +28,7 @@ def isOn(led) :
 
 def turn_on(led):
   if led in led_pins :
-    GPIO.output(led,0)
+    GPIO.output(led,True)
     if led == blue :
       blue_on = True
     elif led == green :
@@ -40,7 +40,7 @@ def turn_on(led):
   
 def turn_off(led):
   if led in led_pins :
-    GPIO.output(led,1)
+    GPIO.output(led,False)
     if led == blue :
       blue_on = False
     elif led == green :
@@ -51,14 +51,14 @@ def turn_off(led):
       red_on = False
 
 def turn_on_all():
-  GPIO.output(led_pins,0)
+  GPIO.output(led_pins,True)
   blue_on = True
   green_on = True
   yellow_on = True
   red_on = True
   
 def turn_off_all():
-  GPIO.output(led_pins,1)
+  GPIO.output(led_pins,False)
   blue_on = False
   green_on = False
   yellow_on = False
