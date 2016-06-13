@@ -8,8 +8,14 @@ btn_pins = [red,yellow,switch]
 GPIO.setup(btn_pins,GPIO.IN)
 
 def isOn(btn) :
-  if(GPIO.input(btn)) :
-    return True
+  if btn in btn_pins :
+    print("Checking button " + btn)
+    if(GPIO.input(btn)) :
+      print("On")
+      return True
+    else :
+      print("Off")
+      return False
   else :
-    return False
+    print("Not a valid button")
 
