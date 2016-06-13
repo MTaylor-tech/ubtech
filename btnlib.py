@@ -10,7 +10,6 @@ GPIO.setup(btn_pins,GPIO.IN)
 def isOn(btn) :
   if btn in btn_pins :
     if(GPIO.input(btn)) :
-      print("On")
       return True
     else :
       return False
