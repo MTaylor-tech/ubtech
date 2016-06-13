@@ -53,6 +53,7 @@ while btn.isOn(btn.switch) :
     led.switch(led.red)
   if btn.isOn(btn.yellow) :
     led.switch(led.yellow)
+  time.sleep(0.1) #this line keeps it from querying too fast and mistaking a long press for multiple presses
 
 print("Goodbye")
 btn.GPIO.cleanup()
