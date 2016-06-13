@@ -59,6 +59,9 @@ def turn_on(led):
   global green_on
   global red_on
   global yellow_on
+  global purple_on
+  global orange_on
+  global white_on
   if led in led_pins :
     print("Turning on LED")
     GPIO.output(led,True)
@@ -82,6 +85,9 @@ def turn_off(led):
   global green_on
   global red_on
   global yellow_on
+  global purple_on
+  global orange_on
+  global white_on
   if led in led_pins :
     print("Turning off LED")
     GPIO.output(led,False)
