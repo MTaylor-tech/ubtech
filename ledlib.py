@@ -6,21 +6,63 @@ blue = 16
 green = 19
 yellow = 20
 red = 21
+blue_on = False
+green_on = False
+yellow_on = False
+red_on = False
 
 led_pins = [blue, green, yellow, red]
 GPIO.setup(led_pins, GPIO.OUT)
 
+def isOn(led) :
+  if led == blue :
+    return blue_on
+  elif led == green :
+    return green_on
+  elif led == yellow :
+    return yellow_on
+  elif led == red :
+    return red_on
+  else :
+    return false
+
 def turn_on(led):
-  GPIO.output(led,0)
+  if led in led_pins :
+    GPIO.output(led,0)
+    if led == blue :
+      blue_on = True
+    elif led == green :
+      green_on = True
+    elif led == yellow :
+      yellow_on = True
+    elif led == red :
+      red_on = True
   
 def turn_off(led):
-  GPIO.output(led,1)
+  if led in led_pins :
+    GPIO.output(led,1)
+    if led == blue :
+      blue_on = False
+    elif led == green :
+      green_on = False
+    elif led == yellow :
+      yellow_on = False
+    elif led == red :
+      red_on = False
 
 def turn_on_all():
   GPIO.output(led_pins,0)
+  blue_on = True
+  green_on = True
+  yellow_on = True
+  red_on = True
   
 def turn_off_all():
   GPIO.output(led_pins,1)
+  blue_on = False
+  green_on = False
+  yellow_on = False
+  red_on = False
 
 def startup():
   print("Startup sequence")
