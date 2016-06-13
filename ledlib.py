@@ -2,16 +2,22 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 
-blue = 16
-green = 19
-yellow = 20
 red = 21
-blue_on = False
-green_on = False
-yellow_on = False
+orange = 12
+yellow = 20
+green = 19
+blue = 16
+purple = 13
+white = 26
 red_on = False
+orange_on = False
+yellow_on = False
+green_on = False
+blue_on = False
+purple_on = False
+white_on = False
 
-led_pins = [blue, green, yellow, red]
+led_pins = [red, orange,yellow,green,blue,purple,white]
 GPIO.setup(led_pins, GPIO.OUT)
 
 def isOn(led) :
