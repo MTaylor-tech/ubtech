@@ -64,6 +64,13 @@ def turn_off_all():
   yellow_on = False
   red_on = False
 
+def switch(led) :
+  if led in led_pins :
+    if isOn(led) :
+      turn_off(led)
+    else :
+      turn_on(led)
+
 def startup():
   print("Startup sequence")
   time.sleep(1)
