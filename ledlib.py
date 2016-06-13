@@ -38,6 +38,18 @@ def isOn(led) :
     print("Red")
     print red_on
     return red_on
+  elif led == orange :
+    print("Orange")
+    print orange_on
+    return orange_on
+  elif led == white :
+    print("White")
+    print white_on
+    return white_on
+  elif led == purple :
+    print("Purple")
+    print purple_on
+    return purple_on
   else :
     print("Not a valid LED")
     return False
