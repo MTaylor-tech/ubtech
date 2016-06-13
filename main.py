@@ -4,4 +4,4 @@ import ledlib as led
 
 led.startup()
 
-#to turn on an led, use a command like this:
+#put your code here
