@@ -56,6 +56,10 @@ def turn_on(led):
     print("Not in LED List")
   
 def turn_off(led):
+  global blue_on
+  global green_on
+  global red_on
+  global yellow_on
   if led in led_pins :
     print("Turning off LED")
     GPIO.output(led,False)
@@ -75,6 +79,10 @@ def turn_off(led):
     print("Not in LED List")
 
 def turn_on_all():
+  global blue_on
+  global green_on
+  global red_on
+  global yellow_on
   print("Turning on all")
   GPIO.output(led_pins,True)
   blue_on = True
@@ -83,6 +91,10 @@ def turn_on_all():
   red_on = True
   
 def turn_off_all():
+  global blue_on
+  global green_on
+  global red_on
+  global yellow_on
   print("Turning off all")
   GPIO.output(led_pins,False)
   blue_on = False
