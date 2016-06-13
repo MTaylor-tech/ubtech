@@ -15,49 +15,61 @@ led_pins = [blue, green, yellow, red]
 GPIO.setup(led_pins, GPIO.OUT)
 
 def isOn(led) :
-  print("Checking led " + led + ": ")
+  print("Checking led")
   if led == blue :
+    print("Blue")
     print blue_on
     return blue_on
   elif led == green :
+    print("Green")
     print green_on
     return green_on
   elif led == yellow :
+    print("Yellow")
     print yellow_on
     return yellow_on
   elif led == red :
+    print("Red")
     print red_on
     return red_on
   else :
-    print False
+    print("Not a valid LED")
     return False
 
 def turn_on(led):
   if led in led_pins :
-    print("Turning on LED " + led)
+    print("Turning on LED")
     GPIO.output(led,True)
     if led == blue :
+      print "Blue"
       blue_on = True
     elif led == green :
+      print "Green"
       green_on = True
     elif led == yellow :
+      print "Yellow"
       yellow_on = True
     elif led == red :
+      print "Red"
       red_on = True
   else :
     print("Not in LED List")
   
 def turn_off(led):
   if led in led_pins :
-    print("Turning off LED " + led)
+    print("Turning off LED")
     GPIO.output(led,False)
     if led == blue :
+      print "Blue"
       blue_on = False
     elif led == green :
+      print "Green"
       green_on = False
     elif led == yellow :
+      print "Yellow"
       yellow_on = False
     elif led == red :
+      print "Red"
       red_on = False
   else :
     print("Not in LED List")
