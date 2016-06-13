@@ -77,6 +77,15 @@ def turn_on(led):
     elif led == red :
       print "Red"
       red_on = True
+    elif led == orange :
+      print "Orange"
+      orange_on = True
+    elif led == purple :
+      print "Purple"
+      purple_on = True
+    elif led == white :
+      print "White"
+      white_on = True
   else :
     print("Not in LED List")
   
@@ -103,6 +112,15 @@ def turn_off(led):
     elif led == red :
       print "Red"
       red_on = False
+    elif led == orange :
+      print "Orange"
+      orange_on = False
+    elif led == purple :
+      print "Purple"
+      purple_on = False
+    elif led == white :
+      print "White"
+      white_on = False
   else :
     print("Not in LED List")
 
@@ -111,24 +129,36 @@ def turn_on_all():
   global green_on
   global red_on
   global yellow_on
+  global purple_on
+  global orange_on
+  global white_on
   print("Turning on all")
   GPIO.output(led_pins,True)
   blue_on = True
   green_on = True
   yellow_on = True
   red_on = True
+  purple_on = True
+  orange_on = True
+  white_on = True
   
 def turn_off_all():
   global blue_on
   global green_on
   global red_on
   global yellow_on
+  global purple_on
+  global orange_on
+  global white_on
   print("Turning off all")
   GPIO.output(led_pins,False)
   blue_on = False
   green_on = False
   yellow_on = False
   red_on = False
+  purple_on = False
+  orange_on = False
+  white_on = False
 
 def switch(led) :
   if led in led_pins :
