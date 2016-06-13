@@ -32,6 +32,14 @@ else :
 time.sleep(2)
 led.turn_off(led.yellow)
 
+#the led.switch(led) function knows whether an led is on or off and switches its value
+led.turn_on(led.green)
+time.sleep(2)
+led.switch(led.green)
+led.switch(led.blue)
+time.sleep(2)
+led.switch(led.blue)
+
 #the btn.isOn(btn) function tells you if a particular button is being pressed or if a switch is on
 #your choices for buttons are currently btn.red, btn.yellow, btn.switch
 while btn.isOn(btn.switch) :
