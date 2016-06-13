@@ -171,7 +171,7 @@ def switch(led) :
 
 def blink(led,num_times,how_fast) :
   if led in led_list :
-    for num_times :
+    for i in range(1,num_times):
       turn_on(led)
       time.sleep(how_fast)
   else :
