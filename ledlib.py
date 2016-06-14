@@ -20,7 +20,7 @@ white_on = False
 led_pins = [red, orange,yellow,green,blue,purple,white]
 GPIO.setup(led_pins, GPIO.OUT)
 
-def isOn(led) :
+def isOn(led=white) :
   print("Checking led")
   if led == blue :
     print("Blue")
@@ -54,7 +54,7 @@ def isOn(led) :
     print("Not a valid LED")
     return False
 
-def turn_on(led):
+def turn_on(led=white):
   global blue_on
   global green_on
   global red_on
@@ -89,7 +89,7 @@ def turn_on(led):
   else :
     print("Not in LED List")
   
-def turn_off(led):
+def turn_off(led=white):
   global blue_on
   global green_on
   global red_on
@@ -160,7 +160,7 @@ def turn_off_all():
   orange_on = False
   white_on = False
 
-def switch(led) :
+def switch(led=white) :
   if led in led_pins :
     if isOn(led) :
       turn_off(led)
@@ -169,10 +169,12 @@ def switch(led) :
   else :
     print("Not in LED List")
 
-def blink(led,num_times,how_fast) :
+def blink(led=white,num_times=5,how_fast=0.25) :
   if led in led_list :
     for i in range(1,num_times):
       turn_on(led)
+      time.sleep(how_fast)
+      turn_off(led)
       time.sleep(how_fast)
   else :
     print "Not in LED list"
@@ -203,4 +205,6 @@ def startup():
   turn_on_all()
   time.sleep(2)
   turn_off_all()
+  time.sleep(1)
+  blink()
 
