@@ -170,7 +170,7 @@ def switch(led=white) :
     print("Not in LED List")
 
 def blink(led=white,num_times=5,how_fast=0.25) :
-  if led in led_list :
+  if led in led_pins :
     for i in range(1,num_times):
       turn_on(led)
       time.sleep(how_fast)
