@@ -27,7 +27,7 @@ while btn.isOn(btn.switch) :
 	time.sleep(.2)
 	led.turn_on(led.blue)
 	time.sleep(.5)
-	led.blink(led.purple, 7, 3)
+	led.blink(led.purple, 7, .3)
 
 
 print "Goodbye"
