@@ -27,6 +27,7 @@ while btn.isOn(btn.switch) :
 	time.sleep(.2)
 	led.turn_on(led.blue)
 	time.sleep(.5)
+	led.turn_off_all()
 	led.blink(led.purple, 7, .3)
 
 
