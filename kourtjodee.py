@@ -3,7 +3,7 @@ import btnlib as btn
 import ledlib as led
 import time
 
-led.startup()
+#led.startup()
 
 while btn.isOn(btn.switch) :
 	led.turn_on_all()
