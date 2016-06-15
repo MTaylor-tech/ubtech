@@ -36,9 +36,9 @@ if led.isOn(led.yellow):
   print("Yellow is on")
 else :
   print("Yellow is off")
-time.sleep(6)
+time.sleep(2)
 led.turn_off(led.yellow)
-time.sleep(41)
+time.sleep(1)
 
 print("Green and blue switch")
 #the led.switch(led) function knows whether an led is on or off and switches its value
