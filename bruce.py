@@ -33,12 +33,12 @@ while btn.isOn(btn.switch) :
 			laser.off();
 			time.sleep(0.10);
 		else: #if read button pressed without yellow
-			led.blink(led.red, 50, 1);
-			led.blink(led.orange, 50, 1);
-			led.blink(led.yellow, 50, 1);
-			led.blink(led,green, 50, 1);
-			led.blink(led.blue, 50, 1);
-			led.blink(led.purple, 50, 1);
+			led.blink(led.red, 50, 0.1);
+			led.blink(led.orange, 50, 0.1);
+			led.blink(led.yellow, 50, 0.1);
+			led.blink(led,green, 50, 0.1);
+			led.blink(led.blue, 50, 0.1);
+			led.blink(led.purple, 50, 0.1);
 			led.blink();
 	if btn.isOn(btn.yellow):
 		while(sam == 0):
