@@ -36,7 +36,7 @@ while btn.isOn(btn.switch) :
 			led.blink(led.red, 50, 0.1);
 			led.blink(led.orange, 50, 0.1);
 			led.blink(led.yellow, 50, 0.1);
-			led.blink(led,green, 50, 0.1);
+			led.blink(led.green, 50, 0.1);
 			led.blink(led.blue, 50, 0.1);
 			led.blink(led.purple, 50, 0.1);
 			led.blink();
