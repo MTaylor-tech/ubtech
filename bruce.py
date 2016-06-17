@@ -3,8 +3,9 @@
 #setup and imports
 import btnlib as btn;
 import ledlib as led;
-import laserlib as Laser;
+import laserlib as laser;
 import time;
+import RPi.GPIO as GPIO
 
 # LCD setup
 import lcddriver;
