@@ -10,7 +10,7 @@ import time;
 import lcddriver;
 GPIO.setmode(GPIO.BCM);
 GPIO.setup(18,GPIO.OUT);
-GPIO.output(18.True);
+GPIO.output(18,True);
 lcd = lcddriver.lcd();
 
 #Start coding
