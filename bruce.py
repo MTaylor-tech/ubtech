@@ -45,7 +45,7 @@ while btn.isOn(btn.switch) :
 			led.turn_on(led.red);
 			led.turn_on(led.yellow);
 			led.turn_on(led.blue);
-			led.turn0_on(led.white);
+			led.turn_on(led.white);
 			time.sleep(3);
 			sam = 1;		
 		led.switch(lcd.red);
