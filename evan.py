@@ -25,6 +25,7 @@ led.turn_off_all()
 time.sleep(1)
 led.turn_on_all()
 time.sleep(2)
+led.turn_off_all()
 
 print("Red on and off")
 #to turn on a single led, use a command like this:
