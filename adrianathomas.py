@@ -54,9 +54,9 @@ print("If switch is on, press orange for orange and purple for purple")
 #the btn.isOn(btn) function tells you if a particular button is being pressed or if a switch is on
 #your choices for buttons are currently btn.orange, btn.blue, btn.switch
 while btn.isOn(btn.switch) :
-  if btn.isOn(btn.orange):
+  if btn.isOn(btn.red):
     led.switch(led.orange)
-  if btn.isOn(btn.purple) :
+  if btn.isOn(btn.yellow) :
     led.switch(led.purple)
   time.sleep(0.50) #this line keeps it from querying too fast and mistaking a long press for multiple presses
 
