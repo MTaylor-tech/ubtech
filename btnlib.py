@@ -3,7 +3,7 @@ GPIO.setmode(GPIO.BCM)
 
 red = 27
 yellow = 17
-switch = 25
+switch = 5
 btn_pins = [red,yellow,switch]
 GPIO.setup(btn_pins,GPIO.IN)
 
