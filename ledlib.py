@@ -3,11 +3,11 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 red = 21
-orange = 12
-yellow = 20
-green = 19
-blue = 16
-purple = 13
+orange = 20
+yellow = 16
+green = 12
+blue = 13
+purple = 19
 white = 26
 red_on = False
 orange_on = False
